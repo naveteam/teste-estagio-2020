@@ -2,6 +2,7 @@
 ## Instruções
 - Utilizar **apenas JavaScript** puro para resolver o problema (**não é permitido o uso de jquery**);
 - Tente sempre utilizar a abordagem ES6+ para resolver os exercícios;
+- Os exercícios de lógica (E.1 à E.11) devem ser realizados no codesandbox, utilizando o template [que pode ser encontrado aqui](https://codesandbox.io/s/teste-estagio-template-mnqlh). Você deve adicionar o link do seu codesandbox no readme do repositório que vai ser entregue;
 - **Entrega:** todas as soluções devem estar em um único repositório (github, gitlab, bitbucket, etc…) de forma **pública**;
 - Neste repositório deve haver, na raiz, um README.md, com as instruções de execução do código desenvolvido;
 - Estilo fica ao critério do candidato, e não é o foco principal do teste;
@@ -35,7 +36,7 @@ Olá, Juca da silva!
 - **E.8** Imprima todos os elementos em que a idade é menor que 30.
 - **E.9** Ordene o array de forma decrescente por idade, em caso de empate o desempate é pelo id(em ordem crescente).
 
-**Para o seguinte exercício**, considere os array de objetos.
+**Para o seguinte exercício**, considere os array de objetos:
 ```
 const movies = [
 	{ id: 1, name: 'Joker' },
