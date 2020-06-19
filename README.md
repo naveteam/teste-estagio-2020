@@ -34,15 +34,33 @@ Olá, Juca da silva!
 - **E.7** Encontre o primeiro objeto que possui uma pessoa com a idade menor que 25 e imprima seu nome. Caso não encontre, imprima que nenhum resultado foi encontrado.
 - **E.8** Imprima todos os elementos em que a idade é menor que 30.
 - **E.9** Ordene o array de forma decrescente por idade, em caso de empate o desempate é pelo id(em ordem crescente).
-**Para os seguintes exercícios** considere o array de objetos:
+
+**Para o seguinte exercício**, considere os array de objetos.
 ```
-[
-    {id: 1, name: ‘Space Jam’, sobrenome: ‘Da Silva’, idade: 42},
-    {id: 2, name: ‘Daniel’, sobrenome: ‘Gonçalves’,  idade: 21},
-    {id: 3, name: ‘Matheus’, sobrenome: ‘Garcia’, idade: 28},
-    {id: 4, name: ‘Gabriel’, sobrenome: ‘Dorneles’,  idade: 21}
+const movies = [
+	{ id: 1, name: 'Joker' },
+	{ id: 2, name: 'Parasite' },
+	{ id: 3, name: 'Avengers' },
+	{ id: 4, name: 'Her' }
+]
+const actors = [
+	{ id: 1, name: 'Cho Yeo-jeong', movie_ids: [2] },
+	{ id: 2, name: 'Robert Downey Jr.', movie_ids: [3] },
+	{ id: 3, name: 'Joaquin Phoenix', movie_ids: [1, 4] },
+	{ id: 4, name: 'Scarlett Johansson', movie_ids: [3] }
 ]
 ```
+- **E.10** Faça uma função que receba 2 parâmetros: um array de `movies` e um array de `actors`. A função deve retornar um array de `movies`, onde cada `movie` possui a propriedade `actors`, que sera um array com os nomes dos atores. Por ex:
+```
+[
+  {
+	id: 99,
+	name: 'Lorem Ipsum',
+	actors: ['John Doe', 'Jane Doe']
+  }
+]
+```
+
 # Exercício de front-end
 ## Desafio
 O objetivo é fazer uma tela em que o usuário verá uma lista de postagens.
