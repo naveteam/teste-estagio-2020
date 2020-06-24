@@ -68,27 +68,152 @@ O objetivo é fazer uma tela em que o usuário verá uma lista dos navers.
 Para obter a listagem dos navers, faça uma [request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) utilizando a [fetch api](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) para o seguinte endpoint: [https://my-json-server.typicode.com/naveteam/fake-api/navers](https://my-json-server.typicode.com/naveteam/fake-api/navers).
 Use [esse layout do figma](https://www.figma.com/file/2qJLqFk0DNCR89vZ1P3wMu/Teste-Fornt-End---Estagio?node-id=0%3A1) para se basear na hora de montar a tela.
 
-# Exercício de back-end
-## Desafio
-Deverá ser implementado uma API [node.js](https://nodejs.org) no padrão `RESTful` que possibilite a criação e listagem de posts e comentários.
-Sendo que cada comentário devem pertencer a um post.
+# Desafio de back-end
+
+## Navedex API
+
+### O Sistema:
+
+O sistema consiste em um banco de dados dos navers, possuindo informações como: nomes, datas de nascimento, cargos, tempo de empresa e projetos que participou.
+datas de nascimento Banco de dados será estruturado por você, lembrando que é obrigatório as entidades de `navers` e `projetos` sendo relacionadas entre si de alguma maneira, deverá ser possível saber em quais projetos um naver está e vice-versa.
+
+### O que deve ser entregue:
+
+Deverá ser implementado uma API [node.js](https://nodejs.org) no padrão [`RESTful`](https://becode.com.br/o-que-e-api-rest-e-restful/#:~:text=REST%20significa%20Representational%20State%20Transfer,abstra%C3%A7%C3%A3o%20da%20arquitetura%20da%20Web.) que possibilite as funcionalidades descritas abaixo:
+
+Junto a API, uma documentação de como testar o sistema é muito bem-vinda. Muitas vezes o README.md do projeto basta, porém também é interessante disponibizar documentação a partir de algum software para testar suas requests, recomendamos [postman](https://www.postman.com/) ou [insomnia](https://insomnia.rest/download/);
+
+Tudo isso deve ser colocado em um repositório público do seu github.
+
+### Funcionalidades
+- Navers
+    - (Index) Rota para listagem dos Navers.
+        - Filtrar por nome, tempo de empresa e cargo.
+        - Entregará como retorno um vetor com todos os navers ou filtrado por algum dos parâmetro acima, exemplo:
+            ```
+                [
+                    {
+                        id: 1, 
+                        name: Fulano, 
+                        birthdate: 1998-06-12, 
+                        admission_date: 2020-06-12,
+                        job_role: Desenvolvedor
+                    },
+                    {
+                        id: 2, 
+                        name: Ciclano, 
+                        birthdate: 1998-06-12, 
+                        admission_date: 2018-06-12, 
+                        job_role: Desenvolvedor
+                    }
+                ]
+            ```
+
+    - (Show) Rota para detalhar informações de um único naver através de seu identificador
+        - Além das informações do naver, trazer quais projetos este participou
+        - Entregará como retorno um objeto contendo informações sobre o Naver, exemplo:
+            ```
+            {
+                id: 1, 
+                name: Fulano, 
+                birthdate: 1998-06-12, 
+                admission_date: 2020-06-12,, 
+                job_role: Desenvolvedor
+                projects: [
+                    { 
+                        id: 3, 
+                        name: Projeto muito Bom
+                    }
+                ] 
+            }
+            ```
+
+    - (Store) Rota de Criação de Naver
+        - Recebe através do body da request os dados do naver e um vetor com os identificadores dos projetos que ele participa e cria um novo registro no banco de dados
+            ```
+                {
+                    name: Fulano, 
+                    birthdate: 1998-06-12, 
+                    admission_date: 2020-06-12,
+                    job_role: Desenvolvedor,
+                    projects: [3]
+                }
+            ```
+        - Entregará como retorno o objeto do usuário criado
+            
+        
+
+- Projetos
+    - (Index) Rota para listagem dos Projetos
+        - Filtrar por nome
+        - Entregará como retorno um vetor com todos os projetos ou filtrado pelo nome, exemplo:
+            ```
+                [
+                    {
+                        id: 3, 
+                        name: Projeto muito Bom
+                    },
+                    {
+                        id: 5, 
+                        name: Projeto Realmente Bom
+                    }
+                ]
+            ```
+
+    - (Show) Rota para detalhar um projeto
+        - Além das informações do projeto, trazer quais foram os navers que participaram
+        - Entregará como retorno um objeto contendo informações sobre o projeto, exemplo:
+            ```
+                    {
+                        id: 3, 
+                        name: Projeto muito Bom,
+                        navers: [
+                            {
+                                id: 1, 
+                                name: Fulano, 
+                                birthdate: 1998-06-12,
+                                admission_date: 2020-06-12, 
+                                job_role: Desenvolvedor
+                            }
+                        ]
+                    }
+            ```
+        
+    - (Store) Rota de Criação de Projeto
+        - Recebe através do body da request os dados do projeto e um vetor com os identificadores dos navers que trabalham nele e cria um novo registro no banco de dados
+            ```
+                {
+                    name: Projeto Bom,
+                    navers: [1]
+                }
+            ```
+        - Entregará como retorno o objeto do Projeto criado
+
 ## Observações
+
+As respostas da API devem ser em formato JSON como nos exemplos acima.
+
 Sugestão de bibliotecas para montar a api:
+
 - Koa ou express
 - Alguma biblioteca para abstrair a camada de dados que preferir.
   - Knex
   - Bookshelf
-  - Sequelize
+  - Objection
   - Mongoose
+
 Prefira o uso de um banco de dados relacional (postgresql, mysql, ...), sendo seu uso não obrigatório.<br>
-Para organizar a estrutura de seu projeto prefira o uso do padrão `MVC` sendo seu uso não obrigátio.<br>
+Para organizar a estrutura de seu projeto prefira o uso do padrão `MVC` sendo seu uso não obrigátório.<br>
 Será observado organização de código, legibilidade e melhor uso dos recursos da linguagem javascript.
+
+Se durante o processo de desenvolvimento não conseguiu fazer algo, explique qual o impedimento que encontrou e como tentou resolver em uma seção `Dificuldades` do seu README.md e nos submite até onde chegou :smile:
+
 ## (BONUS) Exercício de Banco de Dados
 Dado a seguinte estrutura do banco
 <br><br>
-![banco](https://nave-challenges.s3.amazonaws.com/Back-End-Interniship/Screenshot.png)
-- **E.B.1** Crie um script de criação das tabelas.
-- **E.B.2** Faça um script para popular as tabelas.
-- **E.B.3** Faça uma querie que traga todos os `posts` ordenados por `title`.
-- **E.B.4** Faça uma querie que traga todos os `posts` com seus respectivos `comments`.
-- **E.B.5** Faça uma querie que traga todos os `posts` com sua quantidade de `comments`.
+![banco](https://nave-challenges.s3.amazonaws.com/Back-End-Interniship/database-er.png)
+- **E.B.1** Crie um script que delete e crie todas as tabelas.
+- **E.B.2** Faça um script que limpe e crie dados nas tabelas.
+- **E.B.3** Faça uma querie que traga todos os `navers` ordenados pelo seu tempo de empresa `admission_date`.
+- **E.B.4** Faça uma querie que traga todos os `projetos` com seus respectivos `navers`.
+- **E.B.5** Faça uma querie que traga todos os `projetos` com sua quantidade de `navers`.
