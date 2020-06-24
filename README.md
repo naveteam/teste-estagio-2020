@@ -64,35 +64,10 @@ const actors = [
 
 # Exercício de front-end
 ## Desafio
-O objetivo é fazer uma tela em que o usuário verá uma lista de postagens.
-Cada postagem terá uma lista com seus referentes comentários.
-Um post pode ter ou não comentário, dependendo do que vier da API.
-## Documentação da API
-- API RESTful
-- URL: https://jsonplaceholder.typicode.com/
-- Para fazer as requisições HTTP recomendamos o uso da biblioteca [axios](https://github.com/axios/axios) usando o seu link de cdn.
-Exemplo de requisição:
-```javascript
-axios
-  .get(“/posts”)
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-  .then(function () {
-    // always executed
-  });
-```
-## Endpoints
-GET `https://jsonplaceholder.typicode.com/posts` (busca a listagem de postagens)
-GET `https://jsonplaceholder.typicode.com/comments` (busca a listagem de comentários)
-## Observações
-O que mais será levado em conta é o código JavaScript escrito no teste. Não será levado em consideração o código css. Ainda assim, esperamos uma tela com um minímo de estilo para diferenciar o que é postagem e o que é comentário.
-Dica: Para saber quais os comentários de cada postagem, é necessário fazer a comparação do `id` que vem na postagem, com o campo `postId` que vem nos comentários. Sendo iguais, significa que aquele comentário é referente aquela postagem.
+O objetivo é fazer uma tela em que o usuário verá uma lista dos navers.
+Para obter a listagem dos navers, faça uma [request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) utilizando a [fetch api](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) para o seguinte endpoint: [https://my-json-server.typicode.com/naveteam/fake-api/navers](https://my-json-server.typicode.com/naveteam/fake-api/navers).
+Use [esse layout do figma](https://www.figma.com/file/2qJLqFk0DNCR89vZ1P3wMu/Teste-Fornt-End---Estagio?node-id=0%3A1) para se basear na hora de montar a tela.
+
 # Exercício de back-end
 ## Desafio
 Deverá ser implementado uma API [node.js](https://nodejs.org) no padrão `RESTful` que possibilite a criação e listagem de posts e comentários.
