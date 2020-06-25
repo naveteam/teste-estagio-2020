@@ -88,8 +88,7 @@ Tudo isso deve ser colocado em um repositório público do seu github.
 ### Funcionalidades
 - Navers
     - (Index) Rota para listagem dos Navers.
-        - Filtrar por nome, tempo de empresa e cargo.
-        - Entregará como retorno um vetor com todos os navers ou filtrado por algum dos parâmetro acima, exemplo:
+        - Entregará como retorno um vetor com todos os navers, exemplo:
             ```
                 [
                     {
@@ -145,8 +144,7 @@ Tudo isso deve ser colocado em um repositório público do seu github.
 
 - Projetos
     - (Index) Rota para listagem dos Projetos
-        - Filtrar por nome
-        - Entregará como retorno um vetor com todos os projetos ou filtrado pelo nome, exemplo:
+        - Entregará como retorno um vetor com todos os projetos, exemplo:
             ```
                 [
                     {
