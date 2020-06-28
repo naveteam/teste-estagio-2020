@@ -15,7 +15,8 @@
 - **E.2** Dado a seguinte string `‘teste 1 de 2 string 3’`, substitua todas as ocorrências de números por `$`.
 - **E.3** Dado o objeto `{4: ‘a’, 3: ‘e’, 1: ‘i’, 5: ‘s’}` substitua os números na frase `‘T35t3 d3 35t4g1o’` conforme a sua respectiva letra.
 - **E.4** Utilizando a api da viacep (https://viacep.com.br/) e o seu cep como entrada imprima o seu endereço no formato `‘ENDERECO, NUMERO, CIDADE/ESTADO’`. Utilize a [fetch API]([https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API)) para realizar a requisição.
-**Para os seguintes exercícios** considere o array de objetos:
+
+#### Para os exercícios seguintes considere o array de objetos:
 ```
 [
     {id: 1, first_name: ‘Juca’, last_name: ‘Da Silva’, age: 42},
@@ -36,7 +37,7 @@ Olá, Juca da silva!
 - **E.8** Imprima todos os elementos em que a idade é menor que 30.
 - **E.9** Ordene o array de forma decrescente por idade, em caso de empate o desempate é pelo id(em ordem crescente).
 
-**Para o seguinte exercício**, considere os array de objetos:
+#### Para o exercício seguinte, considere os arrays de objetos:
 ```
 const movies = [
 	{ id: 1, name: 'Joker' },
@@ -74,8 +75,8 @@ Use [esse layout do figma](https://www.figma.com/file/2qJLqFk0DNCR89vZ1P3wMu/Tes
 
 ### O Sistema:
 
-O sistema consiste em um banco de dados dos navers, possuindo informações como: nomes, datas de nascimento, cargos, tempo de empresa e projetos que participou.
-datas de nascimento Banco de dados será estruturado por você, lembrando que é obrigatório as entidades de `navers` e `projetos` sendo relacionadas entre si de alguma maneira, deverá ser possível saber em quais projetos um naver está e vice-versa.
+O sistema consiste em um banco de dados dos navers, possuindo informações como: nomes, datas de nascimento, cargo, tempo de empresa e projeto que participou.
+As datas de nascimento no banco de dados será estruturado por você, lembrando que é obrigatório as entidades de `navers` e `projetos` estarem relacionadas entre si. Deve ser possível saber em quais projetos um naver está e vice-versa.
 
 ### O que deve ser entregue:
 
@@ -88,7 +89,7 @@ Tudo isso deve ser colocado em um repositório público do seu github.
 ### Funcionalidades
 - Navers
     - (Index) Rota para listagem dos Navers.
-        - Entregará como retorno um vetor com todos os navers, exemplo:
+        - O retorno esperado é um arrray com todos os navers, exemplo:
             ```
                 [
                     {
@@ -110,7 +111,7 @@ Tudo isso deve ser colocado em um repositório público do seu github.
 
     - (Show) Rota para detalhar informações de um único naver através de seu identificador
         - Além das informações do naver, trazer quais projetos este participou
-        - Entregará como retorno um objeto contendo informações sobre o Naver, exemplo:
+        - O retorno esperado é um objeto contendo informações sobre o Naver, exemplo:
             ```
             {
                 id: 1, 
@@ -138,13 +139,13 @@ Tudo isso deve ser colocado em um repositório público do seu github.
                     projects: [3]
                 }
             ```
-        - Entregará como retorno o objeto do usuário criado
+        - O retorno esperado é o objeto do usuário criado
             
         
 
 - Projetos
     - (Index) Rota para listagem dos Projetos
-        - Entregará como retorno um vetor com todos os projetos, exemplo:
+        - O retorno esperado é um array com todos os projetos, exemplo:
             ```
                 [
                     {
@@ -160,7 +161,7 @@ Tudo isso deve ser colocado em um repositório público do seu github.
 
     - (Show) Rota para detalhar um projeto
         - Além das informações do projeto, trazer quais foram os navers que participaram
-        - Entregará como retorno um objeto contendo informações sobre o projeto, exemplo:
+        - O retorno esperado é um objeto contendo informações sobre o projeto, exemplo:
             ```
                     {
                         id: 3, 
@@ -185,7 +186,7 @@ Tudo isso deve ser colocado em um repositório público do seu github.
                     navers: [1]
                 }
             ```
-        - Entregará como retorno o objeto do Projeto criado
+        - O retorno esperado é o objeto do Projeto criado
 
 ## Observações
 
