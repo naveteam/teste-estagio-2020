@@ -63,15 +63,13 @@ const actors = [
 ]
 ```
 
-# Exercício de front-end
-## Desafio
+# Desafio de front-end
+
 O objetivo é fazer uma tela em que o usuário verá uma lista dos navers.
 Para obter a listagem dos navers, faça uma [request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) utilizando a [fetch api](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) para o seguinte endpoint: [https://my-json-server.typicode.com/naveteam/fake-api/navers](https://my-json-server.typicode.com/naveteam/fake-api/navers).
 Use [esse layout do figma](https://www.figma.com/file/2qJLqFk0DNCR89vZ1P3wMu/Teste-Fornt-End---Estagio?node-id=0%3A1) para se basear na hora de montar a tela.
 
 # Desafio de back-end
-
-## Navedex API
 
 ### O Sistema:
 
