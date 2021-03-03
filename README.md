@@ -1,6 +1,6 @@
 # Teste para vaga de estagiário
 
-### Os exercícios de lógica são obrigatórios para todas as vagas de estágio (tanto backend quanto frontend). Após realizados os exercícios de lógica, a pessoa candidata deve resolver os exercícios pertinentes a sua vaga.
+### Os exercícios de lógica são obrigatórios para todas as vagas de estágio (tanto backend quanto frontend). Após realizados os exercícios de lógica, a pessoa candidata deve resolver os exercícios pertinentes a sua vaga. O exercício bônus é apenas para a vaga de backend.
 
 ## Instruções
 - Utilizar **apenas JavaScript** puro para resolver o problema (**não é permitido o uso de jquery**);
