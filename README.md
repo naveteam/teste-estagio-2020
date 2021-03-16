@@ -11,7 +11,7 @@
 - Estilo fica ao critério do candidato, e não é o foco principal do teste;
 - Só será aceito o uso de bibliotecas de estilo e clientes HTTP (axios, fetch, etc);
 - Caso não consiga resolver todos os exercícios, não tem problema, envie mesmo assim;
-- Ao finalizar o teste, envie o link do seu repositório por e-mail para vagas@nave.rs.
+- Ao finalizar o teste, envie o link do seu repositório por mensagem lá na gupy.
 ## Desafio
 ### Resolver os seguintes exercícios
 - **E.1** Crie uma função que recebe duas strings e retorna a de maior comprimento.
